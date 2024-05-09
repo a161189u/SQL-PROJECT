@@ -101,8 +101,6 @@ WHERE BOXES > 1000
 GROUP BY DATE_FORMAT(SALEDATE,'%Y-%M') # DATE WILL EXTRACT LIKE THIS 2022-MARCH.......
 ORDER BY MONTH DESC;
 
--- 4. Did we ship at least one box of ‘After Nines’ to ‘New Zealand’ on all the months?
-
 -- 5. India or Australia? Who buys more chocolate boxes on a monthly basis?
 SELECT DATE_FORMAT(S.SALEDATE, '%Y-%M') AS MONTH,
 SUM(CASE WHEN GEO = 'India' THEN BOXES ELSE 0 END) AS India_Boxes,
